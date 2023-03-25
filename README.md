@@ -20,7 +20,7 @@ You can install the required packages by running pip install -r requirements.txt
 
 ## Usage
 
-To use the Japanese Derogatory Sentence Detector, you can run the detect.py script with a Japanese sentence as a command-line argument. The script will output either 1 if the sentence is derogatory or 0 if it is non-derogatory.
+To use the Japanese Derogatory Sentence Detector, you can run the detect.py script with a Japanese sentence as a command-line argument.
 
 
 >Here's an example usage:
