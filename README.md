@@ -27,8 +27,11 @@ To use the Japanese Derogatory Sentence Detector, you can run the detect.py scri
 
     python detect.py "今日の天気はどうですか？"
 
->*This will output 0, indicating that the sentence is non-derogatory.*
->**NOTE: This commandline file, (detect.py) is coded such a way that it prints out non-derogatory if the value is predicted to be 0 and vice versa**
+>Output:
+
+    The sentence is non-derogatory
+    
+>**NOTE: The model in reality predicts 0 if the given sentence is non-derogatory and 1 if its derogatory**
 
 
 
