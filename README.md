@@ -25,7 +25,7 @@ To use the Japanese Derogatory Sentence Detector, you can run the detect.py scri
 
 >Here's an example usage:
 
-`python detect.py "今日の天気はどうですか？"`
+    python detect.py "今日の天気はどうですか？"
 
 >*This will output 0, indicating that the sentence is non-derogatory.*
 
@@ -42,8 +42,8 @@ The model architecture used for the Japanese Derogatory Sentence Detector is the
 
 ## Acknowledgements
 
-    This project is based on the Transformers library by Hugging Face: https://github.com/huggingface/transformers
-    The BERT model used for this project is based on the pre-trained model by the Tohoku University NLP Lab: https://huggingface.co/cl-tohoku/bert-base-japanese-whole-word-masking
+This project is based on the Transformers library by Hugging Face: https://github.com/huggingface/transformers
+The BERT model used for this project is based on the pre-trained model by the Tohoku University NLP Lab: https://huggingface.co/cl-tohoku/bert-base-japanese-whole-word-masking
 
 ## License
 
