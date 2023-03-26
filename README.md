@@ -13,9 +13,12 @@ To use the Japanese Derogatory Sentence Detector, you will need:
     2. PyTorch
     3. Transformers
     4. Pandas
-
+    5. Fugashi
+    6. mecab
+    7. ipadic dictionary
+    
 You can install the required packages by running pip install -r requirements.txt.
-
+**Didn't use ipadic NEologd because it was causing learning issues, and mainly because my training data had emoticons as well... apparently Using BertTokenizer or BertJapaneseTokenizer with the default mecab ipadic dictionary does the job as well with better accuracy and performance...**
 
 
 ## Usage
