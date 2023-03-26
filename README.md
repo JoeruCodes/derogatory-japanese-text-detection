@@ -17,18 +17,21 @@ To use the Japanese Derogatory Sentence Detector, you will need:
     6. mecab
     7. ipadic dictionary
     
-You can install the required packages by running pip install -r requirements.txt.
-**Didn't use ipadic NEologd because it was causing learning issues, and mainly because my training data had emoticons as well... apparently Using BertTokenizer or BertJapaneseTokenizer with the default mecab ipadic dictionary does the job as well with better accuracy and performance...**
+You can install the required packages by running:
+
+     pip install -r requirements.txt.
+    
+**Didn't use ipadic NEologd because it was causing learning issues, and mainly because my training data had emoticons as well... Apparently, using the BertTokenizer or BertJapaneseTokenizer with the default mecab ipadic dictionary does the job as well with better accuracy and performance...**
 
 
 ## Usage
 
-To use the Japanese Derogatory Sentence Detector, you can run the detect.py script with a Japanese sentence as a command-line argument.
+To use the Japanese Derogatory Sentence Detector, you can run the predictor.py script with a Japanese sentence as a command-line argument.
 
 
 >Here's an example usage:
 
-    python detect.py "今日の天気はどうですか？"
+    python predictor.py "今日の天気はどうですか？"
 
 >Output:
 
@@ -40,7 +43,31 @@ To use the Japanese Derogatory Sentence Detector, you can run the detect.py scri
 
 ## Training
 
-If you'd like to train the model yourself using a different dataset, you can use the train.py script. The script expects a CSV file containing Japanese sentences labeled as either derogatory or non-derogatory. You can modify the script to adjust the hyperparameters and other training settings.
+### Running train.py with Command Line Arguments
+This script trains a BERT model for sequence classification using a Japanese tokenizer. It takes a CSV file containing text data and their corresponding labels, and outputs a fine-tuned model that can be used for inference. The script requires the following command line arguments:
+
+>--data_file (required): Path to the CSV file containing the training data.
+>--label (required): The name of the column in the CSV file that contains the labels.
+>--text (required): The name of the column in the CSV file that contains the text data.
+>--pretrained_model (default: "/model.pth"): The path to the pre-trained model for tuning.
+>--output_dir (default: "./"): The path to the output directory where the fine-tuned model will be saved.
+>--batch_size (default: 16): The batch size for training.
+>--max_len (default: 200): The maximum length of input sequences.
+>--learning_rate (default: 2e-5): The learning rate for the optimizer.
+>--num_epochs (default: 200): The number of epochs for training.
+
+#### Example:
+
+     python train.py \
+     --data_file data/train_data.csv \
+     --label label \
+     --text text \
+     --pretrained_model pretrained/bert-base-japanese-whole-word-masking.pth \
+     --output_dir models \
+     --batch_size 32 \
+     --max_len 256 \
+     --learning_rate 3e-5 \
+     --num_epochs 5 \
 
 ## Model
 
