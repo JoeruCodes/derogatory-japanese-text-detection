@@ -1,0 +1,7 @@
+fugashi
+mecab-python3
+transformers
+ipadic
+torch
+numpy
+pandas
