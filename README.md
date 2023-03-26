@@ -46,15 +46,15 @@ To use the Japanese Derogatory Sentence Detector, you can run the predictor.py s
 ### Running train.py with Command Line Arguments
 This script trains a BERT model for sequence classification using a Japanese tokenizer. It takes a CSV file containing text data and their corresponding labels, and outputs a fine-tuned model that can be used for inference. The script requires the following command line arguments:
 
->--data_file (required): Path to the CSV file containing the training data.
->--label (required): The name of the column in the CSV file that contains the labels.
->--text (required): The name of the column in the CSV file that contains the text data.
->--pretrained_model (default: "/model.pth"): The path to the pre-trained model for tuning.
->--output_dir (default: "./"): The path to the output directory where the fine-tuned model will be saved.
->--batch_size (default: 16): The batch size for training.
->--max_len (default: 200): The maximum length of input sequences.
->--learning_rate (default: 2e-5): The learning rate for the optimizer.
->--num_epochs (default: 200): The number of epochs for training.
++ --data_file (required): Path to the CSV file containing the training data.
++ --label (required): The name of the column in the CSV file that contains the labels.
++ --text (required): The name of the column in the CSV file that contains the text data.
++ --pretrained_model (default: "/model.pth"): The path to the pre-trained model for tuning.
++ --output_dir (default: "./"): The path to the output directory where the fine-tuned model will be saved.
++ --batch_size (default: 16): The batch size for training.
++ --max_len (default: 200): The maximum length of input sequences.
++ --learning_rate (default: 2e-5): The learning rate for the optimizer.
++ --num_epochs (default: 200): The number of epochs for training.
 
 #### Example:
 
