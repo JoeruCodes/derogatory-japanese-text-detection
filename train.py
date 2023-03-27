@@ -66,7 +66,7 @@ def main():
     # Parse the command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_file', required=True, type=str, help='Path to the training data file')
-    parser.add_argument('--pretrained_model', type=str, default='/model.pth', help='Name or path of the pre-trained BERT model')
+    parser.add_argument('--pretrained_model', type=str, default='./model.pth', help='Name or path of the pre-trained BERT model')
     parser.add_argument('--label', type=str, required=True, help='label of your text data')
     parser.add_argument('--text', type=str, required=True, help='your text data')
     parser.add_argument('--output_dir', type=str, default='./', help='Path to the output directory where the fine-tuned model will be saved')
