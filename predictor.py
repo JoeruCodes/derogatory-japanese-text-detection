@@ -11,7 +11,7 @@ tokenizer = BertJapaneseTokenizer.from_pretrained('cl-tohoku/bert-base-japanese-
 model = BertForSequenceClassification.from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking', num_labels=2)
 
 # Load the saved model state
-model.load_state_dict(torch.load('/model.pth'))
+model.load_state_dict(torch.load('./model.pth'))
 
 # Set the device to CPU or GPU
 #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
